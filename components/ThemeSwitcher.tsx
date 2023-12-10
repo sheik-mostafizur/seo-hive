@@ -10,7 +10,7 @@ import {Tooltip} from "@nextui-org/react";
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme();
-  const [isSelected, setIsSelected] = useState(theme ? true : false);
+  const [isSelected, setIsSelected] = useState(theme ? false : true);
 
   useEffect(() => {
     setMounted(true);
@@ -20,7 +20,7 @@ export function ThemeSwitcher() {
 
   return (
     <Tooltip content={`Mode is ${theme}!`}>
-      <div>
+      <div className="-mb-2">
         <Switch
           isSelected={isSelected}
           onValueChange={() => {

@@ -1,3 +1,21 @@
+# What is SEOHive?
+
+SEOHive represents the fusion of "SEO," denoting search engine optimization, and "Hive," symbolizing a collaborative community working collectively towards common digital marketing objectives. It signifies a shared effort and network dedicated to pioneering SEO and digital marketing strategies.
+
+## Our Features and Sections
+
+### Home
+
+- Navbar:
+  The SEOHive Navbar prominently displays the logo along with intuitive navigation items: Home, Services, Tools, Blog, About, and Contact. It features both Dark and Light mode options, and user account functionalities including Log In.
+
+- Banner/Header:
+  The SEOHive Banner/Header is designed to captivate attention. It presents a compelling title and description, accompanied by two distinct buttons – 'Get Started' and 'Learn More.' On the opposite side, a visually appealing image complements the content.
+
+  <br/>
+
+# For Development from npx create next app
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -6,12 +24,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

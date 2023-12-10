@@ -13,22 +13,21 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import {ThemeSwitcher} from "./ThemeSwitcher";
+import {useTheme} from "next-themes";
 
 const Navbar = () => {
+  const {theme} = useTheme();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    "Home",
-    "Services",
-    "Tools",
-    "Blog",
-    "About",
-    "Contact",
-    "Log Out",
-  ];
+  const menuItems = ["Home", "Services", "Tools", "Blog", "About", "Contact"];
 
   return (
-    <NextNavbar maxWidth="2xl" onMenuOpenChange={setIsMenuOpen}>
+    <NextNavbar
+      disableAnimation
+      isBordered
+      maxWidth="2xl"
+      onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -36,7 +35,11 @@ const Navbar = () => {
         />
         <NavbarBrand>
           <Image
-            src="/images/logo-seo-hive.svg"
+            src={
+              theme == "dark"
+                ? "/images/logo-seo-hive-dark.svg"
+                : "/images/logo-seo-hive.svg"
+            }
             alt="Logo"
             width={130}
             height={200}
@@ -76,12 +79,9 @@ const Navbar = () => {
         <NavbarItem className="hidden lg:flex">
           <ThemeSwitcher />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+            Login
           </Button>
         </NavbarItem>
       </NavbarContent>

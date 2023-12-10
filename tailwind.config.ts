@@ -21,40 +21,54 @@ const config: Config = {
   plugins: [
     nextui({
       themes: {
-        "purple-dark": {
-          extend: "dark", // <- inherit default values from dark theme
+        light: {
+          layout: {}, // light theme layout tokens
           colors: {
-            background: "#0D001A",
-            foreground: "#ffffff",
             primary: {
-              50: "#3B096C",
-              100: "#520F83",
-              200: "#7318A2",
-              300: "#9823C2",
-              400: "#c031e2",
-              500: "#DD62ED",
-              600: "#F182F6",
-              700: "#FCADF9",
-              800: "#FDD5F9",
-              900: "#FEECFE",
-              DEFAULT: "#DD62ED",
+              50: "#e6f1fe",
+              100: "#cce3fd",
+              200: "#99c7fb",
+              300: "#66aaf9",
+              400: "#338ef7",
+              500: "#006FEE",
+              600: "#005bc4",
+              700: "#004493",
+              800: "#002e62",
+              900: "#001731",
+            },
+            secondary: {
+              50: "#f9fafb",
+              100: "#f3f4f6",
+              200: "#e5e7eb",
+              300: "#d1d5db",
+              400: "#9ca3af",
+              500: "#6b7280",
+              600: "#4b5563",
+              700: "#374151",
+              800: "#1f2937",
+              900: "#111827",
+            },
+          }, // light theme colors
+        },
+        dark: {
+          layout: {}, // dark theme layout tokens
+          colors: {
+            background: "#001731", // or DEFAULT
+            secondary: {
+              50: "#f9fafb",
+              100: "#f3f4f6",
+              200: "#e5e7eb",
+              300: "#d1d5db",
+              400: "#9ca3af",
+              500: "#6b7280",
+              600: "#4b5563",
+              700: "#374151",
+              800: "#1f2937",
+              900: "#111827",
+              DEFAULT: "#6b7280",
               foreground: "#ffffff",
             },
-            focus: "#F182F6",
-          },
-          layout: {
-            disabledOpacity: "0.3",
-            radius: {
-              small: "4px",
-              medium: "6px",
-              large: "8px",
-            },
-            borderWidth: {
-              small: "1px",
-              medium: "2px",
-              large: "3px",
-            },
-          },
+          }, // dark theme colors
         },
       },
     }),
