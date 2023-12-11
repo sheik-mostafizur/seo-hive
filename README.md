@@ -12,6 +12,7 @@ SEOHive represents the fusion of "SEO," denoting search engine optimization, and
 - Banner/Header:
   The SEOHive Banner/Header is designed to captivate attention. It presents a compelling title and description, accompanied by two distinct buttons – 'Get Started' and 'Learn More.' On the opposite side, a visually appealing image complements the content.
 
+- Best SEO tools brand logo: title is "Chosen and trusted by companies"
   <br/>
 
 # For Development from npx create next app
