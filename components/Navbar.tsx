@@ -23,11 +23,7 @@ const Navbar = () => {
   const menuItems = ["Home", "Services", "Tools", "Blog", "About", "Contact"];
 
   return (
-    <NextNavbar
-      disableAnimation
-      isBordered
-      maxWidth="2xl"
-      onMenuOpenChange={setIsMenuOpen}>
+    <NextNavbar isBordered maxWidth="2xl" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
