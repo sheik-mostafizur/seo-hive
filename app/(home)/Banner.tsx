@@ -4,12 +4,15 @@ import {FaGithub} from "react-icons/fa";
 import {motion} from "framer-motion";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
+import SlideUp from "@/components/framer-motion/SlideUp";
 
 const Banner = () => {
   return (
     <Container className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center py-8 lg:py-16">
       <div>
-        <h1>Unlock Exceptional Content Marketing Solutions</h1>
+        <SlideUp>
+          <h1>Unlock Exceptional Content Marketing Solutions</h1>
+        </SlideUp>
         <p className="my-4 md:my-8">
           Transform your business potential with our exceptional content
           marketing and SEO services. Take the first step towards growth by

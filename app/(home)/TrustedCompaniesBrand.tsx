@@ -1,4 +1,4 @@
-import ZoomIn from "@/components/framer-motion/ZoomIn";
+import SlideUp from "@/components/framer-motion/SlideUp";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ const TrustedCompaniesBrand = () => {
       <Container className="py-8 lg:py-16">
         <h2 className="text-center my-6">Chosen and trusted by companies</h2>
         <div className="flex items-center justify-between gap-4 flex-wrap">
-          <ZoomIn>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/semrush-new.svg"}
               alt="semrush"
@@ -16,8 +16,8 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
-          <ZoomIn>
+          </SlideUp>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/se-ranking.svg"}
               alt="se-ranking"
@@ -25,8 +25,8 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
-          <ZoomIn>
+          </SlideUp>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/ahrefs-seo-tool.svg"}
               alt="ahrefs"
@@ -34,8 +34,8 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
-          <ZoomIn>
+          </SlideUp>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/spyfu.svg"}
               alt="spyfu"
@@ -43,8 +43,8 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
-          <ZoomIn>
+          </SlideUp>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/surfer.svg"}
               alt="surfer"
@@ -52,8 +52,8 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
-          <ZoomIn>
+          </SlideUp>
+          <SlideUp>
             <Image
               src={"/images/companies-brand/moz.svg"}
               alt="moz"
@@ -61,7 +61,7 @@ const TrustedCompaniesBrand = () => {
               height={200}
               className="w-36 sm:w-40 md:w-52"
             />
-          </ZoomIn>
+          </SlideUp>
         </div>
       </Container>
     </section>
