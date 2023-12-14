@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <Container className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center py-8 lg:py-16">
+    <Container className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
       <div>
         <h1>Unlock Exceptional Content Marketing Solutions</h1>
         <p className="my-4 md:my-8">
