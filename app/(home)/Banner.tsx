@@ -52,6 +52,8 @@ const Banner = () => {
             alt="home banner"
             width={600}
             height={600}
+            className="w-auto h-auto"
+            priority={true}
           />
         </motion.div>
       </motion.div>

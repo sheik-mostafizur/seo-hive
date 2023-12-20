@@ -39,6 +39,7 @@ const Navbar = () => {
             alt="Logo"
             width={130}
             height={200}
+            // className="w-auto h-auto"
           />
         </NavbarBrand>
       </NavbarContent>

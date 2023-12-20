@@ -15,6 +15,8 @@ SEOHive represents the fusion of "SEO," denoting search engine optimization, and
 - Best SEO tools brand logo: title is "Chosen and trusted by companies"
 
 - Why Us: title is "Why Us Unleash Your Online Power" and have three cards with icons.
+
+- Testimonial: title is "Hear from Our Satisfied Clients" with some slide cards for show feedback and rating.
   <br/>
 
 # For Development from npx create next app

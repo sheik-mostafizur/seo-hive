@@ -7,6 +7,7 @@ interface Props {
   bottom?: boolean;
   left?: boolean;
   right?: boolean;
+  scale?: number;
 }
 
 const Slide = (props: Props) => {
@@ -16,6 +17,7 @@ const Slide = (props: Props) => {
     bottom = false,
     left = false,
     right = false,
+    scale = false,
   } = props;
 
   let translateY = 0;
@@ -27,10 +29,10 @@ const Slide = (props: Props) => {
   if (left) translateX = -50;
   if (right) translateX = 50;
 
-  const cardSectionTitleVariants: Variants = {
+  const sectionVariants: Variants = {
     hidden: {
       opacity: 0,
-      scale: 0.98,
+      scale: scale || 0.95,
       translateY,
       translateX,
     },
@@ -47,10 +49,7 @@ const Slide = (props: Props) => {
   };
 
   return (
-    <motion.div
-      variants={cardSectionTitleVariants}
-      initial="hidden"
-      whileInView="show">
+    <motion.div variants={sectionVariants} initial="hidden" whileInView="show">
       {children}
     </motion.div>
   );
