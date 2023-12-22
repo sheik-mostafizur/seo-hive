@@ -17,6 +17,8 @@ SEOHive represents the fusion of "SEO," denoting search engine optimization, and
 - Why Us: title is "Why Us Unleash Your Online Power" and have three cards with icons.
 
 - Testimonial: title is "Hear from Our Satisfied Clients" with some slide cards for show feedback and rating.
+
+- Write Something: title is "Can I write something for you?" also have some cards and buttons for generate text (just showcase)
   <br/>
 
 # For Development from npx create next app

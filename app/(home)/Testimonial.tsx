@@ -99,7 +99,7 @@ const Testimonial = () => {
             key={item._id}
             className="p-2 sm:p-4 lg:p-6"
             style={{display: "flex", alignItems: "center"}}>
-            <div className="p-4 space-y-3 shadow">
+            <div className="p-4 space-y-3 shadow bg-gradient-to-r from-primary-50 to-primary-100 backdrop-blur">
               <div className="text-xl flex items-center gap-2 text-yellow-500">
                 {item.icon}
               </div>
