@@ -1,9 +1,12 @@
+"use client";
 import Slide from "@/components/framer-motion/Slide";
 import Container from "@/components/ui/Container";
 import SectionHead from "@/components/ui/SectionHead";
 import {Button} from "@nextui-org/react";
+import {useTheme} from "next-themes";
 
 const WriteSomethingForYou = () => {
+  const {theme} = useTheme();
   const data = [
     {
       _id: "1",
@@ -64,7 +67,11 @@ const WriteSomethingForYou = () => {
   ];
 
   return (
-    <section className="h-full p-4 bg-[url('/images/home/write-something-bg.png')] bg-fixed bg-no-repeat bg-cover">
+    <section
+      className={`h-full p-4 ${
+        theme != "dark" &&
+        "bg-[url('/images/home/write-something-bg.png')] bg-fixed bg-no-repeat bg-cover"
+      } `}>
       <Container>
         <div className="backdrop-blur">
           <SectionHead
@@ -77,7 +84,7 @@ const WriteSomethingForYou = () => {
         <div className="flex flex-wrap gap-4 lg:gap-6 justify-between h-full items-stretch">
           {data.map((item) => (
             <Slide top key={item._id}>
-              <div className="backdrop-blur-2xl border-white border rounded w-80 h-fit p-4 hover:bg-white/20 hover:scale-105 transition hover:skew-x-1">
+              <div className="backdrop-blur-2xl border-white dark:border-slate-800 border rounded w-80 h-fit p-4 hover:bg-white/20 dark:bg-gray-800 dark:hover:bg-gray-700 hover:scale-105 transition hover:skew-x-1">
                 <h6 className="text-white">{item.title}</h6>
                 <p className="text-gray-200 text-sm my-2">{item.description}</p>
                 <Button size="sm" variant="bordered" className="text-gray-200">

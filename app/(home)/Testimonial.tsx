@@ -68,69 +68,71 @@ const Testimonial = () => {
     },
   ];
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-16 items-center">
-      <div className="space-y-8">
-        <h2>Hear from Our Satisfied Clients</h2>
-        <p>
-          Discover inspiring success stories from clients who&apos;ve
-          experienced remarkable growth and success through our services. Read
-          about their journey and the transformative impact SEOHive has had on
-          their businesses.
-        </p>
-        <Button size="lg" color="primary">
-          Read the success stories
-        </Button>
-      </div>
-      <Swiper
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        direction={"vertical"}
-        className="mySwiper h-96 sm:h-64 md:h-96 lg:h-80 space-y-6">
-        {data.map((item) => (
-          <SwiperSlide
-            key={item._id}
-            className="p-2 sm:p-4 lg:p-6"
-            style={{display: "flex", alignItems: "center"}}>
-            <div className="p-4 space-y-3 shadow bg-gradient-to-r from-primary-50 to-primary-100 backdrop-blur">
-              <div className="text-xl flex items-center gap-2 text-yellow-500">
-                {item.icon}
-              </div>
-              <div>
-                <q>{item.feedback}</q>
-              </div>
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <div className="flex items-center gap-4">
-                  <div>
-                    <Image
-                      src={item.userProfile}
-                      alt={item.userName}
-                      width={50}
-                      height={50}
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h5>{item.userName}</h5>
-                    <p className="text-sm">{item.profession}</p>
-                  </div>
+    <section className="dark:bg-primary-100">
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-16 items-center">
+        <div className="space-y-8">
+          <h2>Hear from Our Satisfied Clients</h2>
+          <p>
+            Discover inspiring success stories from clients who&apos;ve
+            experienced remarkable growth and success through our services. Read
+            about their journey and the transformative impact SEOHive has had on
+            their businesses.
+          </p>
+          <Button size="lg" color="primary">
+            Read the success stories
+          </Button>
+        </div>
+        <Swiper
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          direction={"vertical"}
+          className="mySwiper h-96 sm:h-64 md:h-96 lg:h-80 space-y-6">
+          {data.map((item) => (
+            <SwiperSlide
+              key={item._id}
+              className="p-2 sm:p-4 lg:p-6"
+              style={{display: "flex", alignItems: "center"}}>
+              <div className="p-4 space-y-3 shadow bg-gradient-to-r from-primary-50 to-primary-100 backdrop-blur">
+                <div className="text-xl flex items-center gap-2 text-yellow-500">
+                  {item.icon}
                 </div>
-                <Button size="sm" color="primary" variant="bordered">
-                  Read more
-                </Button>
+                <div>
+                  <q>{item.feedback}</q>
+                </div>
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <Image
+                        src={item.userProfile}
+                        alt={item.userName}
+                        width={50}
+                        height={50}
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h5>{item.userName}</h5>
+                      <p className="text-sm">{item.profession}</p>
+                    </div>
+                  </div>
+                  <Button size="sm" color="primary" variant="bordered">
+                    Read more
+                  </Button>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Container>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
+    </section>
   );
 };
 
