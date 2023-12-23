@@ -1,5 +1,5 @@
 "use client";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
   Navbar as NextNavbar,
   NavbarBrand,
@@ -22,6 +22,11 @@ const Navbar = () => {
 
   const menuItems = ["Home", "Services", "Tools", "Blog", "About", "Contact"];
 
+  const logo =
+    theme == "dark"
+      ? "/images/logo-seo-hive-dark.svg"
+      : "/images/logo-seo-hive.svg";
+
   return (
     <NextNavbar isBordered maxWidth="2xl" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -31,11 +36,7 @@ const Navbar = () => {
         />
         <NavbarBrand>
           <Image
-            src={
-              theme == "dark"
-                ? "/images/logo-seo-hive-dark.svg"
-                : "/images/logo-seo-hive.svg"
-            }
+            src={logo}
             alt="Logo"
             width={130}
             height={200}
