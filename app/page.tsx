@@ -4,6 +4,7 @@ import TrustedCompaniesBrand from "./(home)/TrustedCompaniesBrand";
 import WhyUs from "./(home)/WhyUs";
 import Testimonial from "./(home)/Testimonial";
 import WriteSomethingForYou from "./(home)/WriteSomethingForYou";
+import OurServices from "./(home)/OurServices";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyUs />
       <Testimonial />
       <WriteSomethingForYou />
+      <OurServices />
     </main>
   );
 }
