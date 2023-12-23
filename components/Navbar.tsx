@@ -16,16 +16,26 @@ import {ThemeSwitcher} from "./ThemeSwitcher";
 import {useTheme} from "next-themes";
 
 const Navbar = () => {
-  const {theme} = useTheme();
-
+  const {resolvedTheme} = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = ["Home", "Services", "Tools", "Blog", "About", "Contact"];
 
-  const logo =
-    theme == "dark"
-      ? "/images/logo-seo-hive-dark.svg"
-      : "/images/logo-seo-hive.svg";
+  const [logo, setLogo] = useState("/images/logo-seo-hive.svg");
+
+  useEffect(() => {
+    switch (resolvedTheme) {
+      case "dark":
+        setLogo("/images/logo-seo-hive-dark.svg");
+        break;
+      case "light":
+        setLogo("/images/logo-seo-hive.svg");
+        break;
+      default:
+        setLogo("/images/logo-seo-hive.svg");
+        break;
+    }
+  }, [resolvedTheme]);
 
   return (
     <NextNavbar isBordered maxWidth="2xl" onMenuOpenChange={setIsMenuOpen}>

@@ -17,12 +17,6 @@ export function ThemeSwitcher() {
   }, []);
 
   useEffect(() => {
-    setTheme(
-      localStorage.getItem("theme")
-        ? localStorage.getItem("theme") || "light"
-        : "light"
-    );
-
     setIsSelected(localStorage.getItem("theme") == "dark" ? true : false);
   }, [setTheme]);
 
