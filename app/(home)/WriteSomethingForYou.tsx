@@ -2,11 +2,16 @@
 import Slide from "@/components/framer-motion/Slide";
 import Container from "@/components/ui/Container";
 import SectionHead from "@/components/ui/SectionHead";
+import useNextThemeImg from "@/hooks/useNextThemeImg";
 import {Button} from "@nextui-org/react";
-import {useTheme} from "next-themes";
 
 const WriteSomethingForYou = () => {
-  const {theme} = useTheme();
+  const writeSomethingBg = useNextThemeImg({
+    init: "bg-[url('/images/home/write-something-bg.png')] bg-fixed bg-no-repeat bg-cover",
+    light:
+      "bg-[url('/images/home/write-something-bg.png')] bg-fixed bg-no-repeat bg-cover",
+  });
+
   const data = [
     {
       _id: "1",
@@ -67,11 +72,7 @@ const WriteSomethingForYou = () => {
   ];
 
   return (
-    <section
-      className={`h-full p-4 ${
-        theme != "dark" &&
-        "bg-[url('/images/home/write-something-bg.png')] bg-fixed bg-no-repeat bg-cover"
-      } `}>
+    <section className={`h-full p-4 ${writeSomethingBg} `}>
       <Container>
         <div className="backdrop-blur">
           <SectionHead

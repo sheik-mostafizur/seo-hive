@@ -4,16 +4,18 @@ import {FaGithub} from "react-icons/fa";
 import {motion} from "framer-motion";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
-import {useTheme} from "next-themes";
+import useNextThemeImg from "@/hooks/useNextThemeImg";
 
 const Banner = () => {
-  const {theme} = useTheme();
+  const bannerBg = useNextThemeImg({
+    light:
+      "bg-[url('/images/home/banner-bg.png')] bg-no-repeat bg-cover relative",
+    defaultSrc:
+      "bg-[url('/images/home/banner-bg.png')] bg-no-repeat bg-cover relative",
+  });
+
   return (
-    <section
-      className={`${
-        theme != "dark" &&
-        "bg-[url('/images/home/banner-bg.png')] bg-no-repeat bg-cover relative"
-      }`}>
+    <section className={bannerBg}>
       <Container className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
         <div>
           <h1>Unlock Exceptional Content Marketing Solutions</h1>

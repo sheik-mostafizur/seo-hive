@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {ThemeSwitcher} from "./ThemeSwitcher";
 import {useTheme} from "next-themes";
+import useNextThemeImg from "@/hooks/useNextThemeImg";
 
 const Navbar = () => {
   const {resolvedTheme} = useTheme();
@@ -21,21 +22,12 @@ const Navbar = () => {
 
   const menuItems = ["Home", "Services", "Tools", "Blog", "About", "Contact"];
 
-  const [logo, setLogo] = useState("/images/logo-seo-hive.svg");
-
-  useEffect(() => {
-    switch (resolvedTheme) {
-      case "dark":
-        setLogo("/images/logo-seo-hive-dark.svg");
-        break;
-      case "light":
-        setLogo("/images/logo-seo-hive.svg");
-        break;
-      default:
-        setLogo("/images/logo-seo-hive.svg");
-        break;
-    }
-  }, [resolvedTheme]);
+  const logo = useNextThemeImg({
+    init: "/images/logo-seo-hive.svg",
+    light: "/images/logo-seo-hive.svg",
+    defaultSrc: "/images/logo-seo-hive.svg",
+    dark: "/images/logo-seo-hive-dark.svg",
+  });
 
   return (
     <NextNavbar isBordered maxWidth="2xl" onMenuOpenChange={setIsMenuOpen}>
